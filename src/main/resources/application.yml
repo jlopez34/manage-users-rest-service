@@ -1,0 +1,47 @@
+server:
+  port: 8090
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-exception: true
+reflectoring:
+  trace: true
+
+spring:
+  application:
+    name: manage-users
+  h2:
+    console:
+      enabled: true
+  datasource:
+    initialization-mode: always
+    url: jdbc:h2:~/managedb
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+    hikari:
+      connection-timeout: 6000
+      initialization-fail-timeout: 0
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        enable_lazy_load_no_trans: true
+        ddl-auto: none
+        entity-manager:
+          packagesToScan: com
+
+jwt:
+  header: Authorization
+  secret: nisum-challenge
+  expiration: 604800
+  route:
+    authentication:
+      path: /auth
+      refresh: /refresh
+
+logging:
+  level:
+    root: INFO
