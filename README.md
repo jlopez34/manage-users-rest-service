@@ -45,4 +45,4 @@ Solution must use
 
 1. You should to make clone project [https://github.com/jlopez34/manage-users-rest-service/][https://github.com/jlopez34/manage-users-rest-service/]
 2. Run `./gradlew clean install`
-3. Download Postman Collection:
+3. Download Postman Collection:[https://github.com/jlopez34/manage-users-rest-service/blob/master/env/Nisum-challenge.postman_collection.json][https://github.com/jlopez34/manage-users-rest-service/blob/master/env/Nisum-challenge.postman_collection.json]
